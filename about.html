@@ -1,72 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="css/index.css" rel="stylesheet" />
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <tittle></tittle>
 
     <!-- Fav icons -->
+    <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
     <!-- Font -->
     <!-- CSS --> 
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav>
-        <ul class="nav_link">
-            <li> <a class="active" href="index.html">Home</a></li>
-            <li> <a href="isu.html">Isu</a></li>
-            <li> <a href="pilpres.html">Pilpres</a></li>
-            <li> <a href="about.html">About</a></li>
-        </ul>
-    </nav>
-    <div class="partner">
-        <img src="Frontend/img/logo-km.png" alt="logo-km" width="65">
-        <img src="Frontend/img/logo-revou.png" alt="logo-revou" width="55">
-      </div>
+   <!-- Navbar / Header -->
+   <div class="navcontainer">
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Logo PilpresKini.
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div> 
+        <div class="nav-links">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="isu.html" target="_blank">Isu</a>
+            <a href="pilpres.html" target="_blank">Pilpres</a>
+            <a href="about.html" target="_blank">About</a>
+            <img src="img\logo-km.png" alt="logo-km" width="50">
+            <img src="img\logo-revou.png" alt="logo-revou" width="45">
+        </div>
+    </div>
+</div>
 
     <!--Landing page-->
-    <div class="Lp-1">
-        <div class="container">
-        <h1>About Bijak Memilih</h1>
-        <p>about m</p>
+    <div id="container">
+        <div class="content">
+          <div id="h3">
+        <h3>About PilpresKini.</h3> 
+        </div>
+        <p>PilpresKini adalah portal berita yang didedikasikan untuk memberikan Liputan terkini dan analisis mendalam
+            tentang pemilihan presiden Indonesia. Kami berkomitmen untuk menyediakan informasi yang akurat, tidak bias,
+            dan komprehensif kepada pembaca kami sehingga mereka dapat membuat keputusan yang tepat tentang masa depan negara mereka.
+        </p>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li><img src=""></li>
-                </ul>
+        <div class="footercontainer">
+          <div class="footer-content">
+            <div class="footer-logo">
+              Logo PilpresKini.
             </div>
-
-            <div class="footer-col">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="about.html">Tentang</a></li>
-                    <li><a href="pilpres.html">Pilpres</a></li>
-                    <li><a href="isu.html">Isu</a></li>
-                </ul>
+            <div class="footer-links">
+              <ul class="footer-menu">
+                <li><a href="#">Tentang PilpresKini.</a></li>
+                <li><a href="#">Tim Kami</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
             </div>
-
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><a>Contact@bijakmemilih.com</a></li>
-                    <li><a href="instagram.com/jokowi">Instagram<i class="fab fa-instagram"></i></a></li>
-                    <li><a href="instagram.com/jokowi">Facebook<i class="fab fa-facebook"></i></a></li>
-                </ul>
+            <div class="footer-social">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
             </div>
-
-            <div class="bawah">
-                <p>Bijak Memilih adalah sebuah gerakan</p>
-            </div>
-            <div><p>Copyright © 2023 Bijak Memilih</p></div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+          </div>
         </div>
-    </footer>
+      </footer>
 </body>
 </html>
