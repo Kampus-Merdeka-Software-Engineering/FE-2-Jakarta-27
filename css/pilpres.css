@@ -1,9 +1,14 @@
 * {
   margin: 0;
+<<<<<<< HEAD
+=======
+  padding: 0;
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
   font-family: "Poppins", sans-serif;
 }
 
 .km {
+<<<<<<< HEAD
   height: 70px;
   width: 90px;
 }
@@ -15,6 +20,20 @@
 .logo1 {
   color: black;
   font-weight: 800;
+=======
+  height: 50px;
+  width: 60px;
+  margin: 8px;
+}
+.REVOU {
+  height: 50px;
+  width: 60px;
+  margin: 8px;
+}
+.logo1 {
+  color: black;
+  font-weight: 1000;
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 }
 .logo2 {
   color: crimson;
@@ -46,15 +65,28 @@ nav ul {
 }
 nav ul li {
   list-style: none;
+<<<<<<< HEAD
   margin: 10px;
+=======
+  margin: 20px;
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 }
 nav ul li a {
   text-decoration: none;
   color: black;
 }
+<<<<<<< HEAD
 /* akhir navigasi */
 
 /* paragaraf 1 */
+=======
+/* ****** */
+
+
+/* ........STARTBODY............ */
+
+/* start judul */
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 .container2 {
   width: 49%;
   margin: 0 auto; /* Mengatur jarak kiri dan kanan agar container menjadi tengah secara horizontal */
@@ -73,6 +105,7 @@ nav ul li a {
 .container2 p {
   text-align: center; /* Mengatur teks h1 dan p menjadi di tengah */
 }
+<<<<<<< HEAD
 /* akhir paragaraf 1 */
 
 /* berita */
@@ -148,6 +181,24 @@ nav ul li a {
 }
 
 /*  */
+=======
+/* end judul */
+
+/* Start animation Profil */
+.carousel{
+  height: 500px;
+}
+
+.carousel .carousel-item{
+  width: 400px;
+}
+/* end animation profil */
+
+/* ........ENDBODY............ */
+
+
+/* STARTFOOTER */
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 footer {
   position: relative;
   height: 470px;
@@ -240,4 +291,8 @@ footer {
   color: black;
   font-weight: 800;
 }
+<<<<<<< HEAD
 
+=======
+/* ENDFOOTER */
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978

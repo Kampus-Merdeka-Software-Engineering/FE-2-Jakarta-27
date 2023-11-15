@@ -172,6 +172,7 @@ p {
   from {opacity: .4}
   to {opacity: 1}
 }
+<<<<<<< HEAD
 
 /* ------------------------Section Berita ------------------*/
 /* Create two columns/boxes that floats next to each other */
@@ -277,6 +278,8 @@ body {
   color: #fff;
   border-radius: 5px;
 }
+=======
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 
 /* Footer Properties */
 

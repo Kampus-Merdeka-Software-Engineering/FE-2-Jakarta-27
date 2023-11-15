@@ -35,6 +35,60 @@
   }
   
   nav {
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    margin-right: 20px;
+  }
+  nav ul li {
+    list-style: none;
+    margin: 10px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  /* akhir navigasi */
+  
+  /* paragaraf 1 */
+  .container2 {
+    width: 50%;
+    margin: 0 auto; /* Mengatur jarak kiri dan kanan agar container menjadi tengah secara horizontal */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify; /* Mengatur rata kanan dan kiri untuk teks dalam container */
+  }
+  .container2 h1 {
+    margin: 20px;
+  }
+  .container2 h1 span {
+    color: crimson;
+  }
+  
+  .container2 h1,
+  .container2 p {
+    text-align: center; /* Mengatur teks h1 dan p menjadi di tengah */
+  }
+  /* akhir paragaraf 1 */
+  
+/* Konten Card */
+@import url("https://fonts.googleapis.com/css2?family=Baloo 2&family=Roboto:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", cursive;
+}
+
+.containercard {
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
@@ -174,6 +228,135 @@
     width: 100px;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
+=======
+    flex-direction: column;
+    margin: 5rem 10rem;
+}
+
+.badge {
+    text-transform: uppercase;
+    color: deeppink;
+    letter-spacing: 1px;
+    font-size: 11px;
+    text-align: justify;
+}
+
+.heading {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card_group {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap:wrap-reverse;
+}
+
+.pricing-card {
+    margin: 10px 10px;
+    height: 250px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    padding: 18px 18px;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 6, 7);
+}
+
+.pricing-card i {
+    color: rgb(255, 20, 28);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 34px -12px gray;
+}
+
+.pricing-card span {
+    color: rgb(9, 6, 8);
+    margin: -10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 30px;
+    font-family: "Baloo 2";
+}
+
+.package_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.package_list li {
+    list-style: none;
+    margin: 6px 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.get_started_btn {
+    border: 2px solid deeppink;
+    color: white;
+    background: linear-gradient(45deg, #bc4e9c, #f80759);
+    padding: 8px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.get_started_btn:hover {
+    background: transparent;
+    color: deeppink;
+}
+
+.imgauto{
+  width:100%;
+  height: auto;
+}
+
+
+/* Footer */
+  footer {
+    position: relative;
+    height: 470px;
+    background-color: rgb(241, 198, 53);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .footerdesign {
+    position: relative;
+    bottom: 10%;
+    height: 480px;
+    background-color: rgb(206, 202, 202);
+    top: 10%;
+    justify-content: center;
+    display: flex;
+  }
+  .containerfoot {
+    width: 90%;
+  }
+  .logo3 {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
     margin-left: 10px;
     font-size: 2ch;
   }
