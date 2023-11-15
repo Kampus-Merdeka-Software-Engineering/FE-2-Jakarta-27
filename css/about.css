@@ -1,270 +1,284 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-*{
-    box-sizing: border-box;
+* {
     margin: 0;
-    padding: 0px;
-}
-/* body {
-} */                                                                                 
-
-/* NavBar Properties */
-.navcontainer{
-    width: 80%;
-    height: 100px;
-    font-family: sans-serif;
-    min-height:100vh;
-    width: 100%;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* background-color: rgba(0,213,255,1);
-    font-family: 'poppins'; */
-    position: sticky;
-}
-.nav {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .km {
     height: 70px;
-    width: 100%;
-    padding: 10px 10px;
+    width: 90px;
+  }
+  .REVOU {
+    height: 60px;
+    width: 80px;
+    margin: 10px;
+  }
+  .logo1 {
+    color: black;
+    font-weight: 800;
+  }
+  .logo2 {
+    color: crimson;
+    font-weight: 800;
+  }
+  .logo {
     display: flex;
-    align-items:center;
+    align-items: center;
+    margin-left: 50px;
+  }
+  
+  .container {
+    height: 10vh;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    background-color: #aba9a9;
-    position:absolute;
-    border:black;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.nav  .nav-header {
-    width: 50%;
-    display: inline;
-}
-
-.nav  .nav-header  .nav-title {
-    display: inline-block;
-    font-size: 28px;
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-}
-
-.nav  .nav-btn {
-    display: none;
-}
-
-.nav  .nav-links {
-    width: 60%;
-    display: inline-flex;
-    justify-content:space-between;
-    column-gap: 10px;
-    font-size: 20px;
-}
-
-.nav  .nav-links  a {
-    display: inline-block;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #efefef;
-    
-}
-
-.nav  .nav-links  a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.nav  #nav-check {
-    display: none;
-}
-
-/* Footer Properties */
-
-.footer {
-    font-size: 18px;
-    width: 100%;
-    font-family: sans-serif;
-    background-color: #525252;
-    color: #fff;
-    padding: 30px 0;
-    border-radius: 10px;
-}
-
-.footercontainer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-}
-
-
-.footer-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.footer-menu li {
-    display: inline-block;
+    border-bottom: solid rgb(228, 227, 227) 3px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
     margin-right: 20px;
-}
-
-.footer-menu li:last-child {
-    margin-right: 0;
-}
-
-.footer-menu a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.social-icons {
+  }
+  nav ul li {
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-icons li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons li:last-child {
-    margin-right: 0;
-}
-
-.social-icons a {
-    color: #fff;
+    margin: 10px;
+  }
+  nav ul li a {
     text-decoration: none;
-    font-size: 20px;
-}
+    color: black;
+  }
+  /* akhir navigasi */
+  
+  /* paragaraf 1 */
+  .container2 {
+    width: 50%;
+    margin: 0 auto; /* Mengatur jarak kiri dan kanan agar container menjadi tengah secara horizontal */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify; /* Mengatur rata kanan dan kiri untuk teks dalam container */
+  }
+  .container2 h1 {
+    margin: 20px;
+  }
+  .container2 h1 span {
+    color: crimson;
+  }
+  
+  .container2 h1,
+  .container2 p {
+    text-align: center; /* Mengatur teks h1 dan p menjadi di tengah */
+  }
+  /* akhir paragaraf 1 */
+  
+/* Konten Card */
+@import url("https://fonts.googleapis.com/css2?family=Baloo 2&family=Roboto:wght@300&display=swap");
 
-.footer-bottom {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.footer-bottom p {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", cursive;
 }
 
-
-/* body {
-    font-family: sans-serif;
-    min-height: 100vh;
-    width: 100%;
+.containercard {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,213,255,1);
-    position: relative;
-} */
-
-/* -----------------------------------------------------------------------------------------------------------------------*/
-
-
-/* Responsive Properties */
-@media (max-width:800px) {
-    /* Responsive Navbar */
-    .nav  .nav-btn {
-      display: inline-block;
-      position: center;
-      right: 0px;
-      top: 0px;
-    }
-    .nav  .nav-btn  label {
-      display: flex;
-      flex-direction: column;
-      row-gap: 5px;
-      width: 50px;
-      height: 50px;
-      padding: 15px;
-      border: double;
-      border-radius: 10px 10px 10px 10px;
-    }
-    .nav  .nav-btn  label:hover,.nav  #nav-check:checked ~ .nav-btn  label {
-      background-color: rgba(97, 93, 93, 0.3);
-      cursor: pointer;
-    }
-    .nav  .nav-btn  label  span {
-      display: block;
-      width: 20px;
-      height: 5px;
-      background-color: #eee;
-      border-radius: 5px;
-    }
-    .nav  .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #6b6868;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 70px;
-      left: 0px;
-    }
-    .nav  .nav-links  a {
-      display: block;
-      width: 100%;
-      padding-left: 15px;
-    }
-    .nav  #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav  #nav-check:checked ~ .nav-links {
-      height: 240px;
-      overflow-y:hidden;
-    }
-
-/* Landing Page */
-#container {
-    text-align: center;
-    line-height: 1; /* Sesuaikan dengan kebutuhan Anda */
-    vertical-align: middle; /* Sesuaikan dengan kebutuhan Anda */
-  }
-
-  .content {
-    margin: 50px auto;
-    width: 80%;
-    position: absolute;
-    top: 300px;
-    left: 120px;
-    z-index: 1;
-    padding: 20px 40px;
-    float: right;
-  }
-
-  #h3 {
-    font-family: Arial, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: #323232;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 0;
-    color: #545454;
-  }
-
-  
-   
-    /* Footer Responsive */
-    .footer-content {
-        grid-template-columns: repeat(1, 1fr);
-        row-gap: 20px;
-    }
-    .footer-menu{
-        text-align: left;
-    }
-    .footer-menu li {
-      display: block;
-      margin-bottom: 10px;
-    }
+    flex-direction: column;
+    margin: 5rem 10rem;
 }
 
+.badge {
+    text-transform: uppercase;
+    color: deeppink;
+    letter-spacing: 1px;
+    font-size: 11px;
+    text-align: justify;
+}
+
+.heading {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card_group {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap:wrap-reverse;
+}
+
+.pricing-card {
+    margin: 10px 10px;
+    height: 250px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    padding: 18px 18px;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 6, 7);
+}
+
+.pricing-card i {
+    color: rgb(255, 20, 28);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 34px -12px gray;
+}
+
+.pricing-card span {
+    color: rgb(9, 6, 8);
+    margin: -10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 30px;
+    font-family: "Baloo 2";
+}
+
+.package_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.package_list li {
+    list-style: none;
+    margin: 6px 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.get_started_btn {
+    border: 2px solid deeppink;
+    color: white;
+    background: linear-gradient(45deg, #bc4e9c, #f80759);
+    padding: 8px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.get_started_btn:hover {
+    background: transparent;
+    color: deeppink;
+}
+
+.imgauto{
+  width:100%;
+  height: auto;
+}
+
+
+/* Footer */
+  footer {
+    position: relative;
+    height: 470px;
+    background-color: rgb(241, 198, 53);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .footerdesign {
+    position: relative;
+    bottom: 10%;
+    height: 480px;
+    background-color: rgb(206, 202, 202);
+    top: 10%;
+    justify-content: center;
+    display: flex;
+  }
+  .containerfoot {
+    width: 90%;
+  }
+  .logo3 {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 2ch;
+  }
+  
+  .logo3 .logo1,
+  .logo3 .logo2 {
+    margin-top: 20px;
+  }
+  
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 60%;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .explore,
+  .contacts {
+    font-weight: bold;
+  }
+  .explore li,
+  .contacts li {
+    position: relative;
+    list-style: none;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .contacts a img {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+  }
+  .explore li a,
+  .contacts li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .copyright {
+    height: 120px;
+    border-top: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+  }
+  .p1,
+  .p2 {
+    margin-top: 20px;
+  }
+  .copyright .p1 {
+    text-align: justify;
+    width: 50%;
+  }
+  .feedback a {
+    background-color: rgb(241, 198, 53);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+    color: black;
+    font-weight: 800;
+  }
+  
