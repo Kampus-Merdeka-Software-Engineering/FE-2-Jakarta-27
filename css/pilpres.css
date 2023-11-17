@@ -1,97 +1,45 @@
-* {
-  margin: 0;
-<<<<<<< HEAD
-=======
-  padding: 0;
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
-  font-family: "Poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
 }
 
-.km {
-<<<<<<< HEAD
-  height: 70px;
-  width: 90px;
+.body{
+  background-size: cover;
 }
-.REVOU {
-  height: 60px;
-  width: 80px;
-  margin: 10px;
-}
-.logo1 {
-  color: black;
-  font-weight: 800;
-=======
-  height: 50px;
-  width: 60px;
-  margin: 8px;
-}
-.REVOU {
-  height: 50px;
-  width: 60px;
-  margin: 8px;
-}
-.logo1 {
-  color: black;
-  font-weight: 1000;
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
-}
-.logo2 {
-  color: crimson;
-  font-weight: 800;
-}
-.logo {
-  display: flex;
+                                   
+/* Main setting*/
+html {
+  display: grid;
   align-items: center;
-  margin-left: 50px;
+  text-align: center;
+  font-family: 'PT Sans Caption', sans-serif;
 }
 
-.container {
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid rgb(228, 227, 227) 3px;
+#h3 {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #323232;
+  margin-bottom: 10px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 50px;
-  align-items: center;
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
-nav ul {
-  display: flex;
-  margin-right: 20px;
-}
-nav ul li {
-  list-style: none;
-<<<<<<< HEAD
-  margin: 10px;
-=======
-  margin: 20px;
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
-}
-<<<<<<< HEAD
-/* akhir navigasi */
-
-/* paragaraf 1 */
-=======
-/* ****** */
 
 
 /* ........STARTBODY............ */
 
 /* start judul */
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
 .container2 {
-  width: 49%;
+  width: 70%;
   margin: 0 auto; /* Mengatur jarak kiri dan kanan agar container menjadi tengah secara horizontal */
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 0 auto;
   text-align: justify; /* Mengatur rata kanan dan kiri untuk teks dalam container */
 }
 .container2 h1 {
@@ -105,194 +53,24 @@ nav ul li a {
 .container2 p {
   text-align: center; /* Mengatur teks h1 dan p menjadi di tengah */
 }
-<<<<<<< HEAD
-/* akhir paragaraf 1 */
-
-/* berita */
-.container3 {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 100px;
-}
-
-.subcontainer3 {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 50px 20px 50px;
-}
-.container3 h1 {
-  font-size: 2ch;
-}
-.container3 span {
-  color: crimson;
-}
-
-.subcontainer3 a {
-  text-decoration: none;
-  color: crimson;
-}
-
-.continerberita {
-  display: flex;
-  height: 300px;
-  width: 100%;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-.berita {
-  margin-left: 15px;
-  height: auto;
-  width: 250px;
-}
-.card {
-  height: 150px;
-  width: 250px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.card img {
-  max-width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-.konten {
-  text-align: left;
-  height: 100px;
-  overflow: hidden;
-}
-.konten h1 {
-  font-size: 1.5ch;
-  width: 250px;
-  height: auto;
-  overflow: hidden;
-  height: 50px;
-  color: crimson;
-  text-decoration: none;
-}
-.konten a {
-  text-decoration: none;
-}
-.konten p {
-  font-size: 1.5ch;
-  width: 250px;
-  height: 50px;
-  overflow: hidden;
-  color: black;
-}
-
-/*  */
-=======
 /* end judul */
 
 /* Start animation Profil */
-.carousel{
-  height: 500px;
+
+.carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300vh; /* Set tinggi sesuai tinggi layar */
 }
 
-.carousel .carousel-item{
-  width: 400px;
+.carousel .carousel-item img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Atur ke 'cover' jika ingin gambar mengisi sepenuhnya */
 }
 /* end animation profil */
 
 /* ........ENDBODY............ */
 
 
-/* STARTFOOTER */
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
-footer {
-  position: relative;
-  height: 470px;
-  background-color: rgb(241, 198, 53);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.footerdesign {
-  position: relative;
-  bottom: 10%;
-  height: 480px;
-  background-color: rgb(206, 202, 202);
-  top: 10%;
-  justify-content: center;
-  display: flex;
-}
-.containerfoot {
-  width: 90%;
-}
-.logo3 {
-  position: relative;
-  display: flex;
-  height: 50px;
-  width: 100px;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  font-size: 2ch;
-}
-
-.logo3 .logo1,
-.logo3 .logo2 {
-  margin-top: 20px;
-}
-
-.contact {
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-  width: 60%;
-  margin-left: 100px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  align-items: center;
-}
-.explore,
-.contacts {
-  font-weight: bold;
-}
-.explore li,
-.contacts li {
-  position: relative;
-  list-style: none;
-  font-weight: 400;
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-.contacts a img {
-  height: 25px;
-  width: 25px;
-  margin-left: 5px;
-}
-.explore li a,
-.contacts li a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-}
-
-.copyright {
-  height: 120px;
-  border-top: solid 2px black;
-  display: flex;
-  justify-content: space-between;
-}
-.p1,
-.p2 {
-  margin-top: 20px;
-}
-.copyright .p1 {
-  text-align: justify;
-  width: 50%;
-}
-.feedback a {
-  background-color: rgb(241, 198, 53);
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 20px;
-  color: black;
-  font-weight: 800;
-}
-<<<<<<< HEAD
-
-=======
-/* ENDFOOTER */
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
