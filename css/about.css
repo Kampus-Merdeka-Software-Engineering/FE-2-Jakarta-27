@@ -35,8 +35,7 @@
   }
   
   nav {
-<<<<<<< HEAD
-=======
+
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
@@ -88,7 +87,7 @@
 }
 
 .containercard {
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
+
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
@@ -228,8 +227,6 @@
     width: 100px;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-=======
     flex-direction: column;
     margin: 5rem 10rem;
 }
@@ -356,7 +353,6 @@
     width: 100px;
     align-items: center;
     justify-content: center;
->>>>>>> 7acd7d4ae84efe97110ddbc67ded211e74058978
     margin-left: 10px;
     font-size: 2ch;
   }
