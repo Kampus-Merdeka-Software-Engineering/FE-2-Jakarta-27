@@ -114,7 +114,7 @@
 }
 
 /* Responsive Properties */
-@media (max-width:800px) {
+@media (max-width:900px) {
     /* Responsive Navbar */
     .nav  .nav-btn {
       display: inline-block;
