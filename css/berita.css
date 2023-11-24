@@ -14,7 +14,7 @@ html {
   font-family: 'PT Sans Caption', sans-serif;
 }
 
-h3 {
+h1 {
   font-family: 'PT Sans Caption', sans-serif;
   font-size: 40px;
   font-weight: bold;
@@ -80,7 +80,10 @@ article {margin-bottom: 20px;}
 
 .article-title, .article-image, .article-content p {margin-bottom: 10px;}
 
-.article-image img {width: 100%;}
+.article-image img {
+  width: 100%;
+  border-radius: 24px;
+}
 
 .article-date, .caption {
   font-style: italic;
@@ -113,6 +116,7 @@ a.cardcover {text-decoration: none;}
   background-repeat: no-repeat;
   background-position: center top;
   width: 70%;
+  border-radius: 8px;
 }
 
 .card-content {padding: 2px;}
