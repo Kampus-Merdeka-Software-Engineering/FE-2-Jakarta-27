@@ -155,7 +155,7 @@ p {
   overflow: hidden;
 }
 .card img {
-  
+  max-height: 90%;
   max-width: 100%;
   object-fit: cover;
 }
