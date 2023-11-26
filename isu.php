@@ -1,11 +1,14 @@
 <?php
-
-$conn = mysqli_connect("localhost","root" "", "coba");
-
-$query = "select * from isu"
+$conn = mysqli_connect("localhost","root" ,"", "berita_capres");
+$query = "select * from paslon order by id asc";
+$query2 = "select *  from berita";
 $result = mysqli_query($conn, $query);
+$result2 = mysqli_query($conn, $query2);
 
-
+$rows2 = [];
+while ($row2 = mysqli_fetch_assoc($result2)) {
+    $rows2[] = $row2;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,154 +78,29 @@ $result = mysqli_query($conn, $query);
 <!-- judul -->
 
 <!-- konten --> 
-<?php while($row = mysqli_fetch_assoc($paslon)):?>
-<div class="container3">
-  <div class="subcontainer3">
-    <h1>Seputar <span>Annies - Amin</span></h1>
-    <a href="">lihat lebih banyak</a>
-  </div>  
-  <div class="continerberita">
-    <?php while($row2 = mysqli_fetch_assoc($result2)):?>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/amin4.png" alt="anies"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Pasangan AMIN Dapat Nomor Urut Satu.</h1>
-        <p>Cawapres Amin mengaku nomor urut satu yang didapatkannya ini sesuai yang diharapkan.</p>
-      </a>
-      </div>
+<?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <div class="container3">
+        <div class="subcontainer3">
+            <h1>Seputar <span><?php echo $row["nama"] ?></span></h1>
+            <a href="">lihat lebih banyak</a>
+        </div>
+        <div class="continerberita">
+            <?php
+            foreach ($rows2 as $row2):
+            if ($row2["id"] == $row["id"]): ?>
+                    <div class="berita">
+                        <div class="card"><a href=""><img src="img/amin4.png" alt="anies"></a></div>
+                        <div class="konten">
+                            <a href="">
+                                <h1>Pasangan AMIN Dapat Nomor Urut Satu.</h1>
+                                <p><?php echo $row2["title"] ?></p>
+                            </a>
+                        </div>
+                    </div>
+            <?php endif; endforeach;?>
+        </div>
     </div>
-    <?php endwhile; ?>
-  </div>
-</div>
 <?php endwhile; ?>
-<!-- ------------------------------------------------------------------ -->
-
-<div class="container3">
-  <div class="subcontainer3">
-    <h1>Seputar <span>ganjar - mahfud</span></h1>
-    <a href="">lihat lebih banyak</a>
-  </div>  
-  <div class="continerberita">
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar4.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Dapat Nomor Urut 3, Pendukung: Metal, Ganjar-Mahfud Menang Total</h1>
-        <p>Salam Metal! Menang Total! Teriakan dukungan langsung bergema di kantor Komisi Pemilihan Umum (KPU) Jakarta saat Capres 2024.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar1.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Ganjar Pranowo: Demokrasi yang Jujur dan Adil Harus Jauh dari Unsur KKN</h1>
-        <p>Ganjar Pranowo mengajak semua pihak untuk mengawal demokrasi dalam ajang pemilihan presiden (pilpres) 2024 agar berjalan jujur dan adil.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar2.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Ganjar-Mahfud Minta Presiden Jokowi Netral di Pilpres 2024</h1>
-        <p>Ganjar-Mahfud menginginkan agar masyarakat damai dan bahagia mengikuti pemilu 2024. Sebab, tujuan pemilu adalah untuk kemajuan bangsa dan negara.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar3.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>TPN: Ganjar-Mahfud Siapkan 10 Juta Hunian Rakyat Jika Menang Pilpres 2024</h1>
-        <p>Program Rumah Kita akan difokuskan ke masyarakat yang tidak mampu dan belum punya rumah.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar6.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Ganjar-Mahfud Siapkan Program Jaga Teman untuk Cegah Kekerasan ke Perempuan dan Anak</h1>
-        <p>Ganjar-Mahfud menyiapkan program untuk mencegah kekerasan terhadap perempuan dan anak di lembaga maupun lingkungan masyarakat. </p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/ganjar5.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Ganjar-Mahfud Siapkan Program Zero Blank Spot, Ingin Akses Internet Merata</h1>
-        <p>Kondisi tersebut dijawab oleh Ganjar-Mahfud melalui program zero blank spot sebagai pondasi pertama dalam memenuhi hak-hak digital warga negara.</p>
-      </a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ----------------------------------------- -->
-<div class="container3">
-  <div class="subcontainer3">
-    <h1>Seputar <span>Prabowo - Gibran</span></h1>
-    <a href="">lihat lebih banyak</a>
-  </div>  
-  <div class="continerberita">
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo4.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Infografis Prabowo Subianto Dukung Gibran Rakabuming Maju dalam Pilgub 2024</h1>
-        <p>Kami akan selalu mendukung pemimpin-pemimpin yang dinamis yang bekerja keras untuk rakyat.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo5.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>TKN Prabowo-Gibran Targetkan Raih 22 Juta Suara Pemilih Muda</h1>
-        <p>Bersama Prabowo-Gibran, Insyaallah pemuda akan terus duduk bersama sebagai subyek pembangunan, sebagai game changer dalam menyongsong Indonesia Emas 2045</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo6.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Nomor Urut 2 Prabowo-Gibran, Jubir TKN: Jalan Tengah dan Keseimbangan</h1>
-        <p>Karena ini adalah simbol jalan tengah yang tepat untuk meneruskan pembangunan yang sudah on the track menuju Indonesia Emas 2024.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo7.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Prabowo: Di Planet Kita yang Semakin Kecil, Kebutuhan Kerja sama Sangat Mendesak</h1>
-        <p>Prabowo Subianto mengapresiasi para Delegasi Menhan se-ASEAN atas partisipasinya dalam acara The 17th ASEAN Defence Minister's Meeting (ADMM) and The 10th ASEAN Defence Minister's Meeting Plus 2023 di JCC Senayan, Jakarta.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo8.png" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Ratusan Seniman Bantengan Jatim Deklarasi Dukung Prabowo-Gibran di Pilpres 2024</h1>
-        <p>Para seniman bertekad dapat memenangkan Prabowo-Gibran di Jatim pada Pilpres 2024.</p>
-      </a>
-      </div>
-    </div>
-    <div class="berita">
-      <div class="card"><a href=""><img src="img/prabowo3.jpg" alt="kibar"></a></div>
-      <div class="konten">
-      <a href="">
-        <h1>Prabowo-Gibran Ungkap 8 Tantangan Indonesia di Masa Mendatang</h1>
-        <p>Ada delapan tantangan strategis yang menjadi pertimbangan Prabowo-Gibran dalam menyusun visi, misi dan program periode 2024-2029.</p>
-      </a>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 <!-- konten -->
 
