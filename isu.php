@@ -58,7 +58,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
       </div> 
       <div class="nav-links">
           <a href="index.html" target="_self">Home</a>
-          <a class="navactive" href="isu.html" target="_self">Isu</a>
+          <a class="navactive" href="isu.php" target="_self">Isu</a>
           <a href="pilpres.html" target="_self">Pilpres</a>
           <a href="about.html" target="_self">About</a>
           <img src="img\logo-km.png" alt="logo-km" width="12%" style="margin-right: 4px;">
@@ -92,7 +92,7 @@ while ($row2 = mysqli_fetch_assoc($result2)) {
                         <div class="card"><a href=""><img src="img/amin4.png" alt="anies"></a></div>
                         <div class="konten">
                             <a href="">
-                                <h1>Pasangan AMIN Dapat Nomor Urut Satu.</h1>
+                                <h1> <?php echo $row2["title"]?> </h1>
                                 <p><?php echo $row2["title"] ?></p>
                             </a>
                         </div>
