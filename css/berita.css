@@ -67,11 +67,12 @@ nav ul {
 }
 
 nav li {display: inline-block;}
+nav li p {font-family: 'PT Sans Caption', sans-serif;}
 
 nav a {
   text-decoration: none;
   color: #000;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 main {padding: 20px 0;}
@@ -80,12 +81,14 @@ article {margin-bottom: 20px;}
 
 .article-title, .article-image, .article-content p {margin-bottom: 10px;}
 
+.article-content {text-align: justify;}
+
 .article-image img {
   width: 100%;
   border-radius: 24px;
 }
 
-.article-date, .caption {
+.article-date {
   font-style: italic;
   margin-bottom: 10px;
   opacity: 0.3;
