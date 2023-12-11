@@ -70,15 +70,17 @@ header a {
 .card-cover {
   display: flex;
   border-bottom:solid 0.7px rgba(226, 61, 42, 0.5);
-  padding: 16px 0 16px 0;
+  margin: 16px 0 16px 0;
   align-items: center;
+  cursor: pointer;
 }
 
-a.card-cover {text-decoration: none;}
 
 .c-img {
   width: 25%;
   border-radius: 8px;
+  max-height: 160px;
+  object-fit: cover;
 }
 
 .c-content {

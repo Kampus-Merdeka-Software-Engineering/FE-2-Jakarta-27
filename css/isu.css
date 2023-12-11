@@ -60,6 +60,7 @@ p {
 }
 .container3 h1 {
   font-size: 2ch;
+  text-align: left;
 }
 .container3 span {
   color: #E23D2A;
@@ -68,20 +69,27 @@ p {
 .subcontainer3 a {
   text-decoration: none;
   color: #E23D2A;
+  text-align: right;
 }
 
 .continerberita {
-  display: flex;
   height: 300px;
   width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
-.berita {
+
+.berita, .news-container {
   margin-left: 15px;
   height: auto;
   width: 250px;
+  cursor: pointer;
 }
+
+#parent1, #parent2, #parent3 {
+  display: flex;
+}
+
 .card {
   height: 140px;
   border-radius: 10px;
