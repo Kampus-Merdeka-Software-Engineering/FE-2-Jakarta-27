@@ -133,12 +133,12 @@
           <h1>Survey Pengunjung Pilpres<span style="color: #E23D2A;">Kini</span></h1>
           <p>Menurut-Mu siapa kandidat yang paling berpotensi memenangkan pemilihan presiden 2024?</p>
         </div>
-        <form id="vote-form">
-          <!-- <label for="candidate-input" style="color: #E23D2A;">Voting di sini:</label> -->
-          <select id="candidate-input">
-            <option value="Candidate A">Anies - Amin</option>
-            <option value="Candidate B">Prabowo - Gibran</option>
-            <option value="Candidate C">Ganjar - Mahfud</option>
+        <form id="votingForm">
+          <label for="id_paslon">Select Candidate:</label>
+          <select id="id_paslon" name="id_paslon">
+            <option value="1">Anies - Amin</option>
+            <option value="2">Prabowo - Gibran</option>
+            <option value="3">Ganjar - Mahfud</option>
           </select>
       
           <button id="submit" type="submit">Pilih</button>
@@ -174,45 +174,3 @@
 
 <script type="text/javascript" src="js/scriptnav.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-
-<script>
-  const candidates = ["Candidate A", "Candidate B", "Candidate C"];
-let votes = {
-  "Candidate A": 0,
-  "Candidate B": 0,
-  "Candidate C": 0,
-};
-
-function castVote(candidate) {
-  if (!candidates.includes(candidate)) {
-    console.error("Invalid candidate:", candidate);
-    return;
-  }
-
-  votes[candidate]++;
-  console.log("Your vote has been cast for", candidate);
-}
-
-function displayResults() {
-  for (const [candidate, voteCount] of Object.entries(votes)) {
-    console.log(candidate, ":", voteCount, "votes");
-  }
-}
-
-const voteForm = document.getElementById("vote-form");
-voteForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const candidateInput = document.getElementById("candidate-input");
-  const selectedCandidate = candidateInput.value;
-
-  castVote(selectedCandidate);
-
-  candidateInput.value = "";
-});
-
-const resultsButton = document.getElementById("results-button");
-resultsButton.addEventListener("click", () => {
-  displayResults();
-});
-</script>
