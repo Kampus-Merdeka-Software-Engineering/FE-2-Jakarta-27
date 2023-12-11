@@ -116,6 +116,10 @@ p, pre {
 .accordion-header:hover{
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.kandidat {
+  color: #E23D2A;
+}
 /* End Resume */
 
 
