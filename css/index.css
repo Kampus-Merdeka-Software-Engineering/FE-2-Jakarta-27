@@ -95,8 +95,21 @@ button {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  top: 8px;
-  left: 16px;
+  top: 40px;
+  left: 40px;
+  text-align: left;
+  width: 30%;
+}
+.text h4 {
+  color: #E23D2A;
+  padding-bottom: 20px;
+}
+
+.text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* The dots/bullets/indicators */
@@ -288,7 +301,29 @@ article {
     justify-content: space-between;
   }
   
-  #forweb {margin-right: 10px;}
-  #formobile {display: block;}
+  #forweb {
+    margin-right: 10px;
+    display: none;
+  }
+
+  #formobile {
+    display: block;
+    margin: auto;
+  
+  }
+
+  .text {width: 70%;}
+
+  .text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
+  @media (max-width:630px) {
+  .text p {display: none;}
+  .text h4 {
+    font-size: 1.2rem;}
+}
