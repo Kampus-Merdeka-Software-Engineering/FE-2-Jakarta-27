@@ -27,22 +27,92 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-document.getElementById('submit').addEventListener('click', function(event) {
-  event.preventDefault(); // Menghentikan perilaku bawaan tombol submit
+document.addEventListener('DOMContentLoaded', () => {
+  const newsContainer = document.getElementById('newsContainer');
 
-  var selectedOption = document.getElementById('candidate-input').value; // Ambil nilai pilihan
+  // Fetch news data from your API or source
+  fetch('https://tiny-gray-macaw-shoe.cyclic.app/news')
+      .then(response => response.json())
+      .then(data => {
+          // Shuffle the news array
+          const shuffledNews = shuffleArray(data);
 
-  // Kirim nilai pilihan ke server (Anda perlu mengirim data ini ke server menggunakan AJAX atau fetch)
+          // Pick the first 3 items
+          const randomNews = shuffledNews.slice(0, 3);
 
-  alert('Terima kasih atas partisipasi Anda dalam polling!');
+          // Display the random news
+          randomNews.forEach(news => {
+              const newsElement = document.createElement('div');
+              newsElement.classList.add('card')
+              newsElement.innerHTML = `
+                  <img src="${news.gambar_isu}" alt="News Image" style="max-width: 100%;">
+                  <p class="news-title">${news.title_isu}</p>
+              `;
+
+              // Add click event listener to the news link
+              newsElement.addEventListener('click', () => {
+                // Log information when news is clicked
+                console.log(`Clicked on news with id and id_berita: ${news.id_paslon} ${news.id_berita}`);
+                  // Redirect to a specific page with the news id
+                  window.location.href = `berita${news.id_paslon}.html?id_berita=${news.id_berita}`;
+              });
+
+              newsContainer.appendChild(newsElement);
+          });
+      })
+      .catch(error => console.error('Error fetching news:', error));
+
+  // Function to shuffle an array
+  function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+  }
 });
 
-document.getElementById('results-button').addEventListener('click', function() {
-  // Tampilkan hasil polling dari server
-  var infoElement = document.getElementById('info');
-  if (infoElement.style.maxHeight === '0px') {
-      infoElement.style.maxHeight = infoElement.scrollHeight + 'px';
-  } else {
-      infoElement.style.maxHeight = '0px';
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const newsContainer = document.getElementById('newsContainer2');
+
+  // Fetch news data from your API or source
+  fetch('https://tiny-gray-macaw-shoe.cyclic.app/news')
+      .then(response => response.json())
+      .then(data => {
+          // Shuffle the news array
+          const shuffledNews = shuffleArray(data);
+
+          // Pick the first 3 items
+          const randomNews = shuffledNews.slice(0, 3);
+
+          // Display the random news
+          randomNews.forEach(news => {
+              const newsElement = document.createElement('div');
+              newsElement.classList.add('card')
+              newsElement.innerHTML = `
+                  <img src="${news.gambar_isu}" alt="News Image" style="max-width: 100%;">
+                  <p class="news-title">${news.title_isu}</p>
+              `;
+
+              // Add click event listener to the news link
+              newsElement.addEventListener('click', () => {
+                // Log information when news is clicked
+                console.log(`Clicked on news with id and id_berita: ${news.id_paslon} ${news.id_berita}`);
+                  // Redirect to a specific page with the news id
+                  window.location.href = `berita${news.id_paslon}.html?id_berita=${news.id_berita}`;
+              });
+
+              newsContainer.appendChild(newsElement);
+          });
+      })
+      .catch(error => console.error('Error fetching news:', error));
+
+  // Function to shuffle an array
+  function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+  }
 });
