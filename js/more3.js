@@ -53,10 +53,10 @@ async function moreNEWS() {
                 event.preventDefault();
             
                 // Check if the clicked element was the image or the link
-                if (event.target === imageElement || event.target === newsLink) {
+                if (event.target === imageElement || event.target === descriptionElement,titleElement,dateElement) {
                     // Extract the id_berita from the data
-                    const id_berita = data[index].id_berita;
-            
+                    const id_berita = filteredData[index].id_berita;
+                    console.log('Clicked on news with id_berita:', id_berita)
                     // Redirect to berita1.html with the id_berita parameter
                     window.location.href = `berita3.html?id_berita=${id_berita}`;
                 }

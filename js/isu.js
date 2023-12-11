@@ -53,9 +53,9 @@ async function getDataFromBE() {
             event.preventDefault();
         
             // Check if the clicked element was the image or the link
-            if (event.target === imageElement || event.target === newsLink) {
-                // Extract the id_berita from the data
-                const id_berita = data[index].id_berita;
+            if (event.target === imageElement || event.target === descriptionElement,titleElement) {
+              // Extract the id_berita from the data
+              const id_berita = filteredData[index].id_berita;
         
                 // Redirect to berita1.html with the id_berita parameter
                 window.location.href = `berita1.html?id_berita=${id_berita}`;
@@ -124,12 +124,12 @@ async function getDataFromBE2() {
             event.preventDefault();
         
             // Check if the clicked element was the image or the link
-            if (event.target === imageElement || event.target === newsLink) {
-                // Extract the id_berita from the data
-                const id_berita = data[index].id_berita;
+            if (event.target === imageElement || event.target === descriptionElement,titleElement) {
+              // Extract the id_berita from the data
+              const id_berita = filteredData[index].id_berita;
         
                 // Redirect to berita1.html with the id_berita parameter
-                window.location.href = `berita1.html?id_berita=${id_berita}`;
+                window.location.href = `berita2.html?id_berita=${id_berita}`;
             }
         });
       }
@@ -195,12 +195,12 @@ async function getDataFromBE3() {
             event.preventDefault();
         
             // Check if the clicked element was the image or the link
-            if (event.target === imageElement || event.target === newsLink) {
+            if (event.target === imageElement || event.target === descriptionElement,titleElement) {
                 // Extract the id_berita from the data
-                const id_berita = data[index].id_berita;
-        
+                const id_berita = filteredData[index].id_berita;
+                
                 // Redirect to berita1.html with the id_berita parameter
-                window.location.href = `berita1.html?id_berita=${id_berita}`;
+                window.location.href = `berita3.html?id_berita=${id_berita}`;
             }
         });
       }
