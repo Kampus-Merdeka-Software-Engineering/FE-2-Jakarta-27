@@ -116,3 +116,29 @@ document.addEventListener('DOMContentLoaded', () => {
       return array;
   }
 });
+
+// voooootinggg
+document.getElementById('votingForm').addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const selectedPaslon = formData.get('id_paslon');
+
+  try {
+      const response = await fetch('http://localhost:8080/submit-vote', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ id_paslon: selectedPaslon }),
+      });
+
+      if (response.ok) {
+          alert('Vote submitted successfully!');
+      } else {
+          alert('Error submitting vote. Please try again.');
+      }
+  } catch (error) {
+      console.error('Error submitting vote:', error);
+  }
+});
