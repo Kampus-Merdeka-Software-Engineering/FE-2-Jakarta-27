@@ -59,6 +59,11 @@ button {
   display: none;
 }
 
+.mySlides img{
+  max-height: 600px;
+  object-fit: cover;
+}
+
 /* Next & previous buttons */
 .prev {left: 0}
 .next {right: 0}
@@ -98,7 +103,7 @@ button {
   top: 40px;
   left: 40px;
   text-align: left;
-  width: 30%;
+  width: 25%;
 }
 .text h4 {
   color: #E23D2A;
@@ -107,7 +112,7 @@ button {
 
 .text p {
   display: -webkit-box;
-  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-line-clamp: 12; /* number of lines to show */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -159,6 +164,7 @@ button {
   background: #fff;
   padding: 20px;
   position: relative;
+  max-height: 410px;
 }
 
 .bigcard-text {
@@ -175,15 +181,17 @@ button {
   height: auto;
   overflow: hidden;
   border-radius: 15px;
-
+  max-height: 370px;
+  object-fit: cover;
 }
+
 .jk-overlay {
   background: linear-gradient(180deg, rgba(27, 27, 27, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%);
   border-radius: 15px;
   position: absolute;
   margin: 20px;
   top: 0;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   right: 0;
 }
@@ -222,14 +230,16 @@ article {
   overflow: hidden;
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 .card img {
-  width: 8em;
+  width: 120px;
   height: 5.2em;
+  object-fit: cover;
 }
 
-.card-content {
+.news-title {
   padding: 2px;
   display: -webkit-box;
    -webkit-line-clamp: 2; /* number of lines to show */
@@ -289,9 +299,13 @@ article {
   #section1{
   display: block;
   }
+
   .bigcard {
     width: 100%;
+    display: block;
   }
+
+  .card {max-width: 100%;}
 
   article .baca{
     text-align: center;
