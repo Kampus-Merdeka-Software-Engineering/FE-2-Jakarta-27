@@ -125,20 +125,45 @@ document.getElementById('votingForm').addEventListener('submit', async function 
   const selectedPaslon = formData.get('id_paslon');
 
   try {
-      const response = await fetch('http://localhost:8080/submit-vote', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ id_paslon: selectedPaslon }),
-      });
+    const response = await fetch('https://tiny-gray-macaw-shoe.cyclic.app/submit-vote', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id_paslon: selectedPaslon }),
+    });
 
-      if (response.ok) {
-          alert('Vote submitted successfully!');
-      } else {
-          alert('Error submitting vote. Please try again.');
-      }
+    if (response.ok) {
+      const { votingResults } = await response.json();
+
+      // Display voting results using alert
+      displayResultsAlert(votingResults);
+    } else {
+      alert('Error submitting vote. Please try again.');
+    }
   } catch (error) {
-      console.error('Error submitting vote:', error);
+    console.error('Error submitting vote:', error);
   }
 });
+
+function displayResultsAlert(votingResults) {
+  const resultsText = votingResults.map(result => {
+    const paslonText = getPaslonText(result.id_paslon);
+    return `${result.voteCount} pembaca memilih pasangan ${paslonText}`;
+  }).join('\n');
+
+  alert(`Kamu dan pembaca lainnya telah memilih:\n${resultsText}`);
+}
+
+function getPaslonText(id_paslon) {
+  switch (id_paslon) {
+    case 1:
+      return 'Anies - Amin';
+    case 2:
+      return 'Prabowo Gibran';
+    case 3:
+      return 'Ganjar - Mahfud';
+    default:
+      return 'Unknown';
+  }
+}
