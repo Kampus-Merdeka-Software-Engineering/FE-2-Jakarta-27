@@ -267,31 +267,21 @@ article {
   background: #fff;
   margin: 0 auto;
   border-radius: 24px;
-  height: 400px;
 }
 
-.sec2-title {padding: 1.5rem 0;}
+.sec2-title, #votingForm {padding: 1.5rem 0;}
 
-#vote-form select, #submit{
+select#id_paslon, #submit{
   border: 2px solid #E23D2A;
   font-family: 'Poppins', sans-serif;
   color: #E23D2A;
   background: #fff;
   padding: 10px 32px;
   border-radius: 24px;
+  cursor: pointer;
 }
 #submit {margin-left: 20px;}
 
-#results-button {
-  margin-top: 2rem;
-  border: none;
-  color: #fff;
-  background: #E23D2A;
-  padding: 16px 40px;
-  border-radius: 24px;
-}
-
-#results-button:hover {background-image: linear-gradient(rgb(0 0 0/10%) 0 0);}
 /* -----------------------------------------------------------------------------------------------------------------------*/
 
 @media (max-width:900px) {
